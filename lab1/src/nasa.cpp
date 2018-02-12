@@ -27,7 +27,7 @@ void NASA::main_loop(){
 			if (str == "create"){
 				std::string name;
 				ss>> name;
-				base.push_back(new Spacecraft(name));
+				base.push_front(new Spacecraft(name));
 			}
 
 			else if (str == "copy"){
@@ -37,7 +37,7 @@ void NASA::main_loop(){
         			iter != base.end();     
         			++iter) {
         			if ((**iter).get_id() == index) {
-            			base.push_back(new Spacecraft(**iter));
+            			base.push_front(new Spacecraft(**iter));
             			break;
         			}
     			} 
@@ -107,6 +107,7 @@ void NASA::main_loop(){
         			++iter) {
         			if ((**iter).get_id() == index) {
         				std::cout << **iter<< std::endl;
+        				break;
         			}
         		}
 			}

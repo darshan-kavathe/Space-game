@@ -16,7 +16,7 @@ Spacecraft::Spacecraft(const std::string &name):
 
 Spacecraft::~Spacecraft() {
 	//Destroying: Spacecraft({id}){name={name}, warp={warp}, velocity={velocity}, distance={distance}}
-	std::cout << "Destroying:" << *this << std::endl;
+	std::cout << "Destroying: " << *this << std::endl;
 }
 
 Spacecraft::Spacecraft(const Spacecraft &other):
@@ -31,7 +31,7 @@ Spacecraft::Spacecraft(const Spacecraft &other):
 
 double Spacecraft::fly(int time)	{
 	// type of d, for this call only 
-	double fly_distance = velocity * time/LIGHT_YEAR;
+	double fly_distance = velocity * time / LIGHT_YEAR;
 	distance = distance + fly_distance;
 	return fly_distance;
 }
