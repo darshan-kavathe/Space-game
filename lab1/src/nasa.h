@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include "spacecraft.h"
-
+using std::list;
 namespace ritcs {
 class NASA {
 public:
@@ -13,6 +13,7 @@ public:
 	NASA();
 	~NASA ();
 	void main_loop ();
+	list<Spacecraft*> base;
 };
 }
 #endif // NASA_H

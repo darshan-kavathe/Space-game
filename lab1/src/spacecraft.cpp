@@ -1,63 +1,71 @@
 #include "spacecraft.h"
 #include <cmath>
 
-unsigned int ritcs::Spacecraft::Spacecraft::next_id = 1; // add this to header file
-ritcs::Spacecraft::Spacecraft(const std::string & name):
+using ritcs::Spacecraft;
+ 
+unsigned int Spacecraft::next_id = 1; 
+Spacecraft::Spacecraft(const std::string &name):
 	id(next_id++),
 	name(name),
     warp(0),
     velocity(0),
     distance(0) {
 	//Creating: Spacecraft({id}){name={name}, warp={warp}, velocity={velocity}, distance={distance}}
-	std::cout << "Creating: " << *this << endl;
+	std::cout << "Creating: " << *this << std::endl;
 }
 
-ritcs::Spacecraft::~Spacecraft() {
+Spacecraft::~Spacecraft() {
 	//Destroying: Spacecraft({id}){name={name}, warp={warp}, velocity={velocity}, distance={distance}}
-	std::cout << "Destroying:" << *this << endl;
+	std::cout << "Destroying:" << *this << std::endl;
 }
 
-ritcs::Spacecraft::Spacecraft(const Spacecraft & other):
+Spacecraft::Spacecraft(const Spacecraft &other):
         id(next_id++),
-        name(other.name.append(" copy")),
+        name(other.name + " copy"),
         warp(0),
     	velocity(0),
     	distance(0) {
     //Copying: Spacecraft({id}){name={name}, warp={warp}, velocity={velocity}, distance={distance}}
-    std::cout << "Copying: " << *this << endl;
+    std::cout << "Copying: " << *this << std::endl;
 }
 
-double ritcs::Spacecraft::fly(int time)	{
+double Spacecraft::fly(int time)	{
 	// type of d, for this call only 
 	double fly_distance = velocity * time;
+	distance = distance + fly_distance;
 	return fly_distance;
 }
 
-int ritcs::Spacecraft::get_id()	const{
+int Spacecraft::get_id()	const{
 	return id;
 }
 
-double ritcs::Spacecraft::get_light_years_travelled	() const{
+double Spacecraft::get_light_years_travelled	() const{
 	return distance;
 }
 
-string ritcs::Spacecraft::get_name()const{
+std::string Spacecraft::get_name()const{
 	return name;
 }
 
-unsigned int ritcs::Spacecraft::get_speed()	const{
+unsigned int Spacecraft::get_speed()const{
 	return velocity;
 }
 
-void ritcs::Spacecraft::punch_it_chewy	(unsigned int warp_speed) {
-	warp = warp_speed; // check for  MAX_WARP_SPEED
+void Spacecraft::punch_it_chewy	(unsigned int warp_speed) {
+	if (warp_speed < Spacecraft::MAX_WARP_SPEED){
+		warp = warp_speed; // check for  MAX_WARP_SPEED
+	}
+	else{
+		warp = Spacecraft::MAX_WARP_SPEED;
+	}
 }
 
-ostream& operator<<	(ostream &os, const Spacecraft &s)	{
+std::ostream &ritcs::operator<<(std::ostream &os, const Spacecraft &s)	{
 	 return os << "Spacecraft(" << s.id << "){" <<
-       "name=" << s.name_ <<
+       "name=" << s.name <<
        ", warp=" << s.warp <<
-       ", velocity=" << s,velocity <<
+       ", velocity=" << s.velocity <<
        ", distance=" << s.distance <<
        "}";
 }
