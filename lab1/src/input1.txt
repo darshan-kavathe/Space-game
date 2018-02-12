@@ -1,0 +1,18 @@
+create Lonestar
+create Enterprise
+create Yamato
+warp 1 1
+warp 2 2
+warp 3 3
+fly 1 100
+distance 1
+fly 2 200
+fly 3 300
+destroy 2
+fly 1 100
+print 1
+distance 1
+copy 1
+list
+quit
+

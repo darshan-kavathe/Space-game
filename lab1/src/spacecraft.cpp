@@ -31,7 +31,7 @@ Spacecraft::Spacecraft(const Spacecraft &other):
 
 double Spacecraft::fly(int time)	{
 	// type of d, for this call only 
-	double fly_distance = velocity * time;
+	double fly_distance = velocity * time/LIGHT_YEAR;
 	distance = distance + fly_distance;
 	return fly_distance;
 }
@@ -59,6 +59,7 @@ void Spacecraft::punch_it_chewy	(unsigned int warp_speed) {
 	else{
 		warp = Spacecraft::MAX_WARP_SPEED;
 	}
+	velocity = warp*warp*warp*SPEED_OF_LIGHT;
 }
 
 std::ostream &ritcs::operator<<(std::ostream &os, const Spacecraft &s)	{

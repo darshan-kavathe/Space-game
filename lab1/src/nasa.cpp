@@ -63,7 +63,7 @@ void NASA::main_loop(){
         			iter != base.end();     
         			++iter) {
         			if ((**iter).get_id() == index) {
-            			std::cout << (**iter).get_name()<<" has flown "(**iter).get_light_years_travelled()<<" light years"<< std::endl;
+            			std::cout << (**iter).get_name()<<" has flown "<<(**iter).get_light_years_travelled()<<" light years"<< std::endl;
             			break;
         			}
     			}
@@ -73,7 +73,8 @@ void NASA::main_loop(){
 				int index;
 				int time;
 
-				ss>> index;				
+				ss>> index;	
+				ss>> time;			
 				for (list<Spacecraft*>::const_iterator iter= base.begin(); 
         			iter != base.end();     
         			++iter) {
@@ -94,7 +95,7 @@ void NASA::main_loop(){
 				for (list<Spacecraft*>::const_iterator iter= base.begin(); 
         			iter != base.end();     
         			++iter) {
-        			std::cout << *iter<< std::endl;
+        			std::cout << **iter<< std::endl;
     			}
 			}
 
@@ -105,7 +106,7 @@ void NASA::main_loop(){
         			iter != base.end();     
         			++iter) {
         			if ((**iter).get_id() == index) {
-        				std::cout << *iter<< std::endl;
+        				std::cout << **iter<< std::endl;
         			}
         		}
 			}
@@ -118,17 +119,19 @@ void NASA::main_loop(){
         			iter != base.end();     
         			++iter) {
         			if ((**iter).get_id() == index) {
-        				std::cout << (**iter).get_name()<<" set to warp speed "(**iter).punch_it_chewy(warp_s)<< std::endl;
+        				(**iter).punch_it_chewy(warp_s);
+        				std::cout << (**iter).get_name()<<" set to warp speed "<<(**iter).warp<< std::endl;
         			}
         		}
 			}
 
 			else if	(str == "quit"){
 				std::cout<<"All ships have flown a total of "<< total_distance <<" light years"<< std::endl;
+				return;
 			}
 
 			else{
-				std::cout<<"Unrecognized command: "<< ss;
+				std::cout<<"Unrecognized command: "<< ss<< std::endl;;
 			}
 		}
 	}

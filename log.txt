@@ -1,0 +1,23 @@
+commit fcb95f0466690a73e6514c968951218a35dc033a
+Author: Darsh <dck1135@rit.edu>
+Date:   Sun Feb 11 23:54:41 2018 -0500
+
+    remaining: fix iterator
+
+commit 47f509b12da1464aafbb19879716cb8b96d854bf
+Author: Darsh <dck1135@rit.edu>
+Date:   Sun Feb 11 20:37:02 2018 -0500
+
+    nasa.cpp remaining
+
+commit 49c90bf45d10d15ad3fb3c93f8561ad250441461
+Author: dck1135 <dck1135@rit.edu>
+Date:   Mon Feb 5 18:45:07 2018 -0500
+
+    Initial file structure
+
+commit d53b62356b4d2302d1b825cbae48224f7c3096a4
+Author: dck1135 <dck1135@rit.edu>
+Date:   Mon Feb 5 17:02:36 2018 -0500
+
+    Initial commit

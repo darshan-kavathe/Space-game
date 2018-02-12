@@ -1,0 +1,24 @@
+Creating: Spacecraft(1){name=Lonestar, warp=0, velocity=0, distance=0}
+Creating: Spacecraft(2){name=Enterprise, warp=0, velocity=0, distance=0}
+Creating: Spacecraft(3){name=Yamato, warp=0, velocity=0, distance=0}
+Lonestar set to warp speed 1
+Enterprise set to warp speed 2
+Yamato set to warp speed 3
+Lonestar flies 100 seconds for 4.4494e-07 light years
+Lonestar has flown 4.4494e-07 light years
+Enterprise flies 200 seconds for 3.09339e-07 light years
+Yamato flies 300 seconds for 1.75715e-07 light years
+Destroying:Spacecraft(2){name=Enterprise, warp=2, velocity=2398339664, distance=3.09339e-07}
+Lonestar flies 100 seconds for 4.4494e-07 light years
+Spacecraft(1){name=Lonestar, warp=1, velocity=299792458, distance=8.8988e-07}
+Lonestar has flown 8.8988e-07 light years
+Copying: Spacecraft(4){name=Lonestar copy, warp=0, velocity=0, distance=0}
+Spacecraft(1){name=Lonestar, warp=1, velocity=299792458, distance=8.8988e-07}
+Spacecraft(4){name=Lonestar copy, warp=0, velocity=0, distance=0}
+Spacecraft(3){name=Yamato, warp=3, velocity=3799429070, distance=1.75715e-07}
+Spacecraft(4){name=Lonestar copy, warp=0, velocity=0, distance=0}
+All ships have flown a total of 1.37493e-06 light years
+Destroying:Spacecraft(1){name=Lonestar, warp=1, velocity=299792458, distance=8.8988e-07}
+Destroying:Spacecraft(4){name=Lonestar copy, warp=0, velocity=0, distance=0}
+Destroying:Spacecraft(3){name=Yamato, warp=3, velocity=3799429070, distance=1.75715e-07}
+Destroying:Spacecraft(24546336){name=Lonestar copy, warp=0, velocity=0, distance=0}
