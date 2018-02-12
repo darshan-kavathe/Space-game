@@ -1,3 +1,9 @@
+commit a02d519bb297d3d3c1d59fa8875dbb4f45102213
+Author: Darsh <dck1135@rit.edu>
+Date:   Mon Feb 12 01:05:03 2018 -0500
+
+    compiling,fix calculation
+
 commit fcb95f0466690a73e6514c968951218a35dc033a
 Author: Darsh <dck1135@rit.edu>
 Date:   Sun Feb 11 23:54:41 2018 -0500
